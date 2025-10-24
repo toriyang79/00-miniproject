@@ -127,49 +127,6 @@ GET    /api/analytics/trending/   - 인기 프롬프트
 
 ---
 
-## 🧠 예시 시나리오
-
-### 1️⃣ 템플릿 프롬프트 생성
-
-```json
-POST /api/prompts/
-{
-  "title": "Code Generator",
-  "content": "Write {{language}} code for {{feature}}",
-  "is_template": true
-}
-```
-
-자동 추출된 변수:
-
-```json
-"variables": ["language", "feature"]
-```
-
----
-
-### 2️⃣ 변수 적용
-
-```json
-POST /api/prompts/1/apply_variables/
-{
-  "variable_values": {
-    "language": "Python",
-    "feature": "file upload"
-  }
-}
-```
-
-응답:
-
-```json
-{
-  "result": "Write Python code for file upload"
-}
-```
-
----
-
 ## 🧾 개발 단계별 플로우 (요약)
 
 1️⃣ **프로젝트 초기화** → DRF + Swagger 세팅
