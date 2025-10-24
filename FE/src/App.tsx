@@ -5,6 +5,7 @@ import AppLayout from './components/layout/AppLayout';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
+import Prompts from './pages/Prompts';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         <Route element={<ProtectedRoute />}>
           <Route element={<AppLayout />}>
             <Route path="/" element={<Dashboard />} />
-            <Route path="/prompts" element={<Dashboard />} />
+            <Route path="/prompts" element={<Prompts />} />
             <Route path="/categories" element={<Dashboard />} />
             <Route path="/favorites" element={<Dashboard />} />
             <Route path="/analytics" element={<Dashboard />} />

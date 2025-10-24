@@ -1,19 +1,30 @@
+export interface Tag {
+  id: number;
+  name: string;
+}
+
+export interface CategoryDetail {
+  id: number;
+  name: string;
+  color: string;
+}
+
 export interface Prompt {
   id: number;
   user: number;
   username: string;
   title: string;
   content: string;
-  category: number | null;
-  category_name?: string;
-  tags: string[];
+  description?: string;
+  category: CategoryDetail | null;
+  tags: Tag[];
   is_template: boolean;
   variables: string[];
   color_label: 'ready' | 'draft' | 'template' | 'update';
   is_favorite: boolean;
   is_public: boolean;
-  use_count: number;
-  last_used: string | null;
+  usage_count: number;
+  last_used_at: string | null;
   created_at: string;
   updated_at: string;
 }
